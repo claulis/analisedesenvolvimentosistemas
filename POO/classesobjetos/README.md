@@ -53,15 +53,23 @@ No exemplo nessa pasta temos `Carro.js` e `Livro.js`
    - autor
    - ano
   
-Como implementar uma classe em javascript?
+Como implementar uma classe em javascript? Preste atenção nos comentários 👉 `// /*..*/`
 Vamos ver aqui 👇
 ```javascript
+// a palavra reservada class, obivamente serve para declarar uma classe
 class Carro{
+/*a palavra reservada constructor serve para transforar a classe em objeto,
+guardando em memória os dados do objeto(o estado)
+dentro do constructor são declarados os attrubutos (attributes),
+ou seja as caraterísticas da entidade que aclasse quer representar.
+A palavra reservada this se refere ao atributos declarados que fazem parte detsa classe, são variáveis internas da classe. */
     constructor(marca, modelo, ano) {
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
       }
+/*a partir daqui tem a declaração e implementação dos metodos ou funções,
+ que são o comportamento da classe, ou seja o que a classe faz. */
       acelerar() {
         console.log(`${this.marca} ${this.modelo} Acelerando...`);
       }

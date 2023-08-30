@@ -93,7 +93,7 @@ Quando você cria uma instância (ou objeto) de uma classe, o sistema aloca uma 
 
 Em linguagens de programação orientadas a objetos, como Java, Python, C++ e muitas outras, quando você cria um objeto, o espaço necessário para armazenar seus atributos (variáveis) e métodos (funções) é reservado na memória.
 
-## De classe para objeto
+## Da classe para o objeto
 
 Agora vamos utilizar a classe Carro e torna-la um objeto, ou seja alocar um espaço em momória para o objeto Carro.
 

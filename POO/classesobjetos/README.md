@@ -17,7 +17,7 @@ Na computação, até o advento das da linguagem c++ (anos 80-90), os dados eram
 Por exemplo: de que maneira o **conceito de pessoa** pode ser representada por variáveis isoladas? O conceito de uma pessoa é complexo e essa entidade possui caraterísticas relacionadas entre si e a própria entedade se relaciona com outras entidades.
 A realidade é bem complexa! 😱
 
-## Classe e objetos
+## Classe 
 Enfim chegamos ao ponto da questão.
 Podemos entender classes como o projeto, o modelo da representação computacional dos dados de uma entidade real e um objeto como seua realização ou implementação na memória do computador.
 
@@ -78,3 +78,50 @@ A palavra reservada this se refere ao atributos declarados que fazem parte detsa
       }
 }
 ```
+
+Essa classe tem um construtor que aceita três argumentos: marca, modelo e ano. Esses argumentos são usados para inicializar os atributos correspondentes da classe. Além disso, a classe possui dois métodos: acelerar e frear, que usam os atributos da classe para exibir mensagens indicando que o carro está acelerando ou freando, respectivamente.
+
+Com base nesse código, você pode criar objetos do tipo Carro, atribuindo valores específicos para a marca, modelo e ano. E então, você pode chamar os métodos acelerar e frear nesses objetos para ver as mensagens de saída correspondentes.
+
+## Objetos
+Quando você cria um objeto a partir de uma classe, você está criando uma representação concreta dessa entidade específica, com valores reais para seus atributos e a capacidade de executar os métodos definidos na classe.
+Um objeto é uma **instância em memória** concreta dessa classe. Se a classe é o plano, o objeto é a realização desse plano. Por exemplo, você pode criar um objeto do tipo Carro chamado meuCarro com a marca "Toyota", o modelo "Corolla" e o ano "2023". O objeto meuCarro terá os atributos específicos e poderá executar os métodos definidos na classe Carro.
+
+> :memo: uma "instância em memória" refere-se ao espaço físico reservado na memória do computador para conter os dados específicos de um objeto criado a partir de uma classe. Cada instância tem sua própria cópia dos atributos e métodos definidos na classe, permitindo a criação de objetos independentes com  características distintas.
+
+Quando você cria uma instância (ou objeto) de uma classe, o sistema aloca uma área na memória para armazenar os atributos e métodos específicos daquela instância.
+
+Em linguagens de programação orientadas a objetos, como Java, Python, C++ e muitas outras, quando você cria um objeto, o espaço necessário para armazenar seus atributos (variáveis) e métodos (funções) é reservado na memória.
+
+## De classe para objeto
+
+Agora vamos utilizar a classe Carro e torna-la um objeto, ou seja alocar um espaço em momória para o objeto Carro.
+
+```javascript
+// Criação da primeira instância do objeto Carro
+const carro1 = new Carro("Maserati", "Gran Turismo", 2016);
+
+// Chamada do método 'acelerar' da instância carro1
+carro1.acelerar();
+
+// Chamada do método 'frear' da instância carro1
+carro1.frear();
+
+// Criação da segunda instância do objeto Carro
+const carro2 = new Carro("Alfa Romeo", "Mito", 2015);
+
+// Chamada do método 'acelerar' da instância carro2
+carro2.acelerar();
+
+// Chamada do método 'frear' da instância carro2
+carro2.frear();
+```
+
+Neste exemplo são criadas duas instnacias de dois objetos Carros: carro1 e carro 2. Os dois objetos usam a mesma classe Carro mas são objetos diferentes pois ocupam espaços de memoria diferentes para armazenar dados diferentes.
+
+> :memo: a palavra-chave `new` é usada em várias linguagens de programação orientadas a objetos, como JavaScript, para criar uma nova instância (objeto) de uma classe. Ela indica ao interpretador ou compilador que você deseja alocar memória para um novo objeto com base na definição da classe e, opcionalmente, passar argumentos para o construtor da classe para inicializar os atributos.
+
+
+
+
+

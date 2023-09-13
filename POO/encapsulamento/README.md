@@ -17,7 +17,7 @@ Encapsulamento é um dos quatro princípios fundamentais da programação orient
 
 - **Reutilização de código*: Encapsulamento facilita a criação de componentes reutilizáveis, pois os detalhes de implementação ficam encapsulados na classe, permitindo que outras partes do código as utilizem sem conhecer esses detalhes.
 
-## Quando usar Encapsulamento
+## Quando usar o encapsulamento
 
 - **Ocultação de Detalhes Internos**: O encapsulamento permite que você oculte os detalhes internos da implementação de uma classe. Isso significa que os usuários da classe *não precisam conhecer ou se preocupar com a lógica interna da classe*, apenas a interface pública é importante.
 
@@ -30,3 +30,66 @@ Encapsulamento é um dos quatro princípios fundamentais da programação orient
 - **Abstração**: O encapsulamento permite que você crie abstrações mais eficazes, onde os usuários da classe só precisam se preocupar com o que a classe faz, não com como ela faz. Isso facilita o desenvolvimento de *código mais limpo e legível*.
 
 - **Segurança**: Evita que partes não autorizadas do código modifiquem ou acessem dados sensíveis, *melhorando a segurança do sistema*.
+
+# Encapsulamento e Javascript
+
+A linguagem Javscript, diferentemente de outras linguagens, não tinha suporte nativo a membros public e privados, logo o encapsulamento era  um "faz de conta". Evidentemente os engenheiros criadores do interpretador Javascript não  reputavam essencisis recursos natiuvos a supoirte do encapsulamento.
+Porém, com a introdução de **campos privados** em versões mais recentes do JavaScript (ECMAScript 2019 e posteriores), agora pode criar atributos privados de uma forma mais robusta e com melhor suporte nativo.
+
+> **Campos privados** são introduzidos usando a sintaxe `#nomeDoCampo`. Esses campos são verdadeiramente privados e não podem ser acessados de fora da classe em que são definidos. Isso fornece uma maneira eficaz de encapsular atributos sem depender de convenções de nomenclatura.
+
+Vamos ver o exemplo de código
+
+```javascript 
+class Carro {
+  // Membro privado
+  #ligado= false;
+  constructor(marca, modelo, ano) {
+      this.marca = marca; // Membro público
+      this.modelo = modelo; // Membro público
+      this.ano = ano; // Membro público      
+  }
+
+  acelerar() {
+      if (this.#ligado) {
+          console.log(`${this.marca} ${this.modelo} Acelerando...`);
+      } else {
+          console.log(`${this.marca} ${this.modelo} está desligado. Não é possível acelerar.`);
+      }
+  }
+
+  frear() {
+      if (this.#ligado) {
+          console.log(`${this.marca} ${this.modelo} Freando...`);
+      } else {
+          console.log(`${this.marca} ${this.modelo} está desligado. Não é possível frear.`);
+      }
+  }
+
+  ligar() {
+      this.#ligado = true;
+      console.log(`${this.marca} ${this.modelo} foi ligado.`);
+  }
+
+  desligar() {
+      this.#ligado = false;
+      console.log(`${this.marca} ${this.modelo} foi desligado.`);
+  }
+}
+
+
+// Criar uma instância de Carro
+const meuCarro = new Carro('Toyota', 'Corolla', 2023);
+
+// Tentar acessar diretamente a propriedade privada #ligado (deve resultar em um erro)
+//console.log(meuCarro.#ligado); // Isso resultará em um erro, pois #ligado é privado
+
+// Ligar o carro
+meuCarro.ligar();
+
+// Acelerar o carro (deve funcionar)
+meuCarro.acelerar(); // Saída: Toyota Corolla Acelerando...
+
+// Tentar acessar diretamente a propriedade privada #ligado novamente (deve resultar em um erro)
+//console.log(meuCarro.#ligado); // Isso resultará em um erro, pois #ligado é privado
+```

@@ -33,8 +33,8 @@ Encapsulamento é um dos quatro princípios fundamentais da programação orient
 
 # Encapsulamento e Javascript
 
-A linguagem Javscript, diferentemente de outras linguagens, não tinha suporte nativo a membros public e privados, logo o encapsulamento era  um "faz de conta". Evidentemente os engenheiros criadores do interpretador Javascript não  reputavam essencisis recursos natiuvos a supoirte do encapsulamento.
-Porém, com a introdução de **campos privados** em versões mais recentes do JavaScript (ECMAScript 2019 e posteriores), agora pode criar atributos privados de uma forma mais robusta e com melhor suporte nativo.
+A linguagem Javscript, diferentemente de outras linguagens, não tinha suporte nativo a membros public e privados, logo o encapsulamento era  um "faz de conta". Evidentemente os engenheiros criadores do interpretador Javascript não reputavam essenciais recursos nativos a suporte do encapsulamento.
+Porém, com a introdução de **campos privados**, em versões mais recentes do JavaScript (ECMAScript 2019 e posteriores), agora pode-se criar atributos privados de uma forma mais robusta e com melhor suporte nativo.
 
 > **Campos privados** são introduzidos usando a sintaxe `#nomeDoCampo`. Esses campos são verdadeiramente privados e não podem ser acessados de fora da classe em que são definidos. Isso fornece uma maneira eficaz de encapsular atributos sem depender de convenções de nomenclatura.
 

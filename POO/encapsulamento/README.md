@@ -98,7 +98,7 @@ meuCarro.acelerar(); // Saída: Toyota Corolla Acelerando...
 Toda e qualquer linguagem de programação moderna providencia um recurso para a aplicação do encapsulamento. Essa técnica é conhecida como **getter e setter**. 
 Em Javascript, segundo as últimas diretrizes da especificação ECMAScript 2024 Language encapsulamento é feito atraves de `get` e `set`
 
-Com o exemplo abaixo. Queremos criar uma classe para o objeto *Pessoa* onde o *nome* seja público e de livre acesso, sem filtros ou validações, e *idade* seja privado para limitar o acesso para poder validar as informações para este atributo
+Com o exemplo abaixo queremos criar uma classe para o objeto *Pessoa* onde o *nome* seja público e de livre acesso, sem filtros ou validações, e *idade* seja privado para limitar o acesso para poder validar as informações para este atributo
 
 ```javascript
 class Pessoa {

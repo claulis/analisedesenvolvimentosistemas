@@ -1,5 +1,5 @@
 # Encapsulamento e Programação Orientada a Objetos
-Encapsulamento é um dos quatro princípios fundamentais da programação orientada a objetos (POO), juntamente com abstração, herança e polimorfismo. Ele se refere à ideia de esconder os detalhes internos de uma classe ou objeto e expor uma interface pública consistente para interagir com esse objeto. Aqui estão os principais conceitos e vantagens do encapsulamento em POO:
+Encapsulamento é um dos quatro princípios fundamentais da programação orientada a objetos (POO), juntamente com abstração, herança e polimorfismo. Ele se refere à ideia de **esconder os detalhes internos de uma classe ou objeto e expor uma interface pública consistente para interagir com esse objeto**. Aqui estão os principais conceitos e vantagens do encapsulamento em POO:
 
 ## Principais conceitos do encapsulamento:
 

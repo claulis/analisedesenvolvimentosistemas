@@ -140,3 +140,52 @@ pessoa1.idade = 150; // Saída: "Idade inválida"
 console.log(pessoa1.idade); // Saída: 30 (idade não foi modificada devido à validação)
 
 ```
+
+# Exercicio de fixação
+
+Crie uma classe **ContaBancaria** que represente uma conta bancária. A classe deve encapsular os detalhes da conta, tornando os atributos privados e fornecendo métodos públicos para acessar e modificar esses atributos. A classe deve ter os seguintes atributos e métodos:
+
+**Atributos (todos privados)**:
+
+- saldo - Representa o saldo atual da conta bancária.
+- titular - Representa o nome do titular da conta bancária.
+
+**Métodos públicos**:
+
+- constructor(titular) - Um construtor que inicializa o titular da conta e define o saldo inicial como zero.
+- getSaldo() - Um getter que retorna o saldo atual da conta.
+- getTitular() - Um getter que retorna o nome do titular da conta.
+- depositar(valor) - Um método que permite depositar uma quantia valor na conta, aumentando o saldo.
+- sacar(valor) - Um método que permite sacar uma quantia valor da conta, diminuindo o saldo. Certifique-se de verificar se há saldo suficiente antes de efetuar o saque.
+- transferir(destino, valor) - Um método que permite transferir uma quantia valor da conta atual para outra conta destino. Certifique-se de verificar se há saldo suficiente antes de efetuar a transferência.
+
+**Instruções**:
+
+Crie a classe ContaBancaria conforme descrito acima.
+Crie uma instância da classe ContaBancaria com um nome de titular de sua escolha e realize várias operações de depósito, saque e transferência para testar a funcionalidade da classe.
+Use console.log para exibir mensagens informativas sobre as operações realizadas.
+Faça isso em um arquivo único **conta.js** e teste no terminal con **node**
+
+Exemplo de Uso:
+
+```javascript
+const minhaConta = new ContaBancaria("João");
+console.log(`Saldo Inicial de ${minhaConta.getTitular()}: R$${minhaConta.getSaldo()}`);
+
+minhaConta.depositar(1000);
+console.log(`Saldo após depósito: R$${minhaConta.getSaldo()}`);
+
+minhaConta.sacar(500);
+console.log(`Saldo após saque: R$${minhaConta.getSaldo()}`);
+
+const outraConta = new ContaBancaria("Maria");
+minhaConta.transferir(outraConta, 200);
+console.log(`Saldo após transferência: R$${minhaConta.getSaldo()}`);
+console.log(`Saldo da conta de ${outraConta.getTitular()}: R$${outraConta.getSaldo()}`);
+
+```
+
+
+
+
+

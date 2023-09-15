@@ -1,11 +1,31 @@
-# Classes e objetos
+# Abstração - Classes e Objetos 
+
+## O que é Abstração? :eyes:
+
+Vamos supor que você está entrando no seu carro, liga o motor e vai no destino que deve ir. Para se mover com um carro, precisa saber dos detalhes do funcionamento do motor?
+Precisa saber que tipo de engenharia foi utilizada? Precisa saber da hidráulica? Da eletronica?🤔
+Claro que não! você só precisa saber como ligar, acelerar, usar o volante....saber qual a esquerda e a direta 😂
+
+Essa é a abstração. **É a ideia de que você pode usar objetos em seu programa sem precisar entender todos os detalhes internos de como esses objetos funcionam.**
+
+Aqui estão alguns pontos-chave sobre abstração em POO:
+
+- **Esconder detalhes complexos:** Em POO, você cria objetos que têm propriedades (dados) e métodos (ações) associados a eles. A abstração permite que você se concentre apenas no uso desses objetos, sem precisar saber como eles são implementados internamente.
+
+- **Facilita o gerenciamento de complexidade:** À medida que os programas se tornam mais complexos, a abstração torna mais fácil lidar com essa complexidade. Você pode pensar nos objetos como "caixas pretas" que fazem coisas úteis sem que você precise saber como funcionam por dentro.
+
+- **Promove a reutilização de código:** Quando você usa abstração para criar objetos, você pode reutilizá-los em diferentes partes do seu programa ou mesmo em projetos diferentes. Isso economiza tempo e torna o desenvolvimento de software mais eficiente.
+
+- **Melhora a colaboração:** Em projetos de programação maiores, diferentes pessoas podem trabalhar em diferentes partes do código. A abstração permite que cada pessoa se concentre em sua parte do código sem precisar entender tudo o que está acontecendo em outras partes.
+
 ## Representação dos dados
-O mundo pode ser compreendido por nos humanos atraves de pensamentos e julgamentos sobre caraterísticas das coisas ao nosso redor.
-Cores,sabores,cheiros,imagens, sensações do tato são fenomenos que nos colocam em relação com o mundo.
-Um ser humano entende um objeto da realidade por meio de suas carateristicas e de relações. 
-O milagre do cerebro humano está em entender os objetos na sua complexidade, nas suas caraterístas mais profundas.
-Isto são os humnaos.
-E como um computador pode entender os objetos que nos circundam?
+
+O mundo pode ser compreendido por nos humanos através de pensamentos e julgamentos sobre caraterísticas das coisas ao nosso redor.
+Cores, sabores, cheiros, imagens, sensações do tato são fenômenos que nos colocam em relação com o mundo.
+Um ser humano entende um objeto da realidade por meio de suas características e de relações. 
+O milagre do cérebro humano está em entender os objetos na sua complexidade, nas suas características mais profundas.
+
+E como um computador pode entender os objetos que nos circundam?🤔
 Simplesmente não entendem...mas podemos fornecer uma **representação computacional** das caraterística dos objetos reais.
 
 ## Paradigma de Programação Orientada a Objetos (POO)
@@ -14,7 +34,7 @@ Na computação, até o advento das da linguagem c++ (anos 80-90), os dados eram
 > :memo: **Lembra:** Uma variável é um espaço na memória do computador que armazena um valor e possui um nome.
 > Na programação, as variáveis são usadas para armazenar valores que podem ser usados posteriormente no programa.
 
-Por exemplo: de que maneira o **conceito de pessoa** pode ser representada por variáveis isoladas? O conceito de uma pessoa é complexo e essa entidade possui caraterísticas relacionadas entre si e a própria entedade se relaciona com outras entidades.
+Por exemplo: de que maneira o **conceito de pessoa** pode ser representada por variáveis isoladas? O conceito de uma pessoa é complexo e essa entidade possui caraterísticas relacionadas entre si e a própria entidade se relaciona com outras entidades.
 A realidade é bem complexa! 😱
 
 ## Classe 
@@ -27,7 +47,7 @@ Do ponto de vista acadêmico, segundo Pressman (2011)
 
 Vamos tentar entender de um ponto de vista prático.
 
-Vamos usar a linguagem Javascript, bastante popular e que implementa os paradigmas POO. E vamos usar o exemplos do código acima. 
+Vamos usar a linguagem Javascript, bastante popular e que implementa os paradigmas POO. E vamos usar o exemplo do código que está nesta pasta. 
 Vamos trabalhar com o exemplo de carros e livros.
 
 ![Maserati](https://th.bing.com/th/id/OIP.BHyLJSt4fj8TMdv4dholagAAAA?pid=ImgDet&rs=1 "Top!!")

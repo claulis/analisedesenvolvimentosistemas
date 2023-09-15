@@ -115,7 +115,7 @@ Em linguagens de programação orientadas a objetos, como Java, Python, C++ e mu
 
 ## Da classe para o objeto
 
-Agora vamos utilizar a classe Carro e torna-la um objeto, ou seja alocar um espaço em momória para o objeto Carro.
+Agora vamos utilizar a classe Carro e torná-la um objeto, ou seja alocar um espaço em memória para o objeto Carro.
 
 ```javascript
 // Criação da primeira instância do objeto Carro
@@ -137,11 +137,131 @@ carro2.acelerar();
 carro2.frear();
 ```
 
-Neste exemplo são criadas duas instnacias de dois objetos Carros: carro1 e carro 2. Os dois objetos usam a mesma classe Carro mas são objetos diferentes pois ocupam espaços de memoria diferentes para armazenar dados diferentes.
+Neste exemplo são criadas duas instâncias de dois objetos Carro: carro1 e carro 2. Os dois objetos usam a mesma classe Carro mas são objetos diferentes pois ocupam espaços de memória diferentes para armazenar dados diferentes.
 
 > :memo: a palavra-chave `new` é usada em várias linguagens de programação orientadas a objetos, como JavaScript, para criar uma nova instância (objeto) de uma classe. Ela indica ao interpretador ou compilador que você deseja alocar memória para um novo objeto com base na definição da classe e, opcionalmente, passar argumentos para o construtor da classe para inicializar os atributos.
 
+## Como criar classes em Javascript?
+
+Além de usar `class`e `new` (a maneira mais clássica) existem outras manerias de criar classes e objetos em Javascript, muitas. Essa linguagem é bastante dinâmica e flexível e se adapta a vários paradigmas e estilos de programação. També cabe ressaltar que é em constante e rápida evolução. A cada nova versão os recursos e as novidades aumentam.
+As outras maneiras encontradas até agora são:
+- **Função construtora**
+- **Factory Functions**
+- **Object.create**
+
+( o resultado será o mesmo para todos)
+
+Sem delongas vamos olhar um exemplo de código para a classe Pessoa 👇
+
+```javascript
+// Forma 1: Criando a classe usando uma função construtora
+// essa função construtora recebe dos parametros
+function Pessoa(nome, idade) {
+  this.nome = nome;
+  this.idade = idade;
+}
+
+//com a técnica prototype incluimos mais detalhes à classe que antes não existiam
+Pessoa.prototype.apresentar = function () {
+  console.log(`Olá, meu nome é ${this.nome} e tenho ${this.idade} anos.`);
+};
+
+Pessoa.prototype.envelhecer = function () {
+  this.idade++;
+};
+
+// Criando objetos usando a função construtora
+const pessoa1 = new Pessoa("João", 25);
+const pessoa2 = new Pessoa("Maria", 30);
+
+pessoa1.apresentar(); // Saída: Olá, meu nome é João e tenho 25 anos.
+pessoa1.envelhecer();
+pessoa1.envelhecer();
+pessoa1.apresentar();// A idade mudou
+
+pessoa2.apresentar(); // Saída: Olá, meu nome é Maria e tenho 30 anos.
+pessoa2.envelhecer();
+pessoa2.apresentar();//A idade mudou
 
 
+/*Factory Functions (Funções Fábrica):
+Você pode criar objetos usando funções que retornam objetos.
+Isso permite maior controle sobre a criação de objetos e pode ser útil para criar objetos com configurações personalizadas.*/
+function criarPessoa(nome, idade) {
+  return {
+    nome,
+    idade,
+    apresentar() {
+      console.log(`Olá, meu nome é ${this.nome} e tenho ${this.idade} anos.`);
+    },
+    envelhecer() {
+      this.idade++;
+    },
+  };
+}
+
+const pessoa3 = criarPessoa("Laura", 28);
+pessoa3.apresentar(); // Saída: Olá, meu nome é Laura e tenho 28 anos.
+pessoa3.envelhecer();
+pessoa3.apresentar();//A idade mudou
+
+/* A função Object.create permite criar um novo objeto com um protótipo especificado.
+Isso é útil quando você deseja criar objetos sem usar uma classe ou uma função construtora.*/
+const pessoaProto = {
+  apresentar() {
+    console.log(`Olá, meu nome é ${this.nome} e tenho ${this.idade} anos.`);
+  },
+};
+
+const pessoa4 = Object.create(pessoaProto);
+pessoa4.nome = "Eduardo";
+pessoa4.idade = 35;
+pessoa4.apresentar(); // Saída: Olá, meu nome é Eduardo e tenho 35 anos.
+```
+
+## Exercícios para fixação
+
+### Exercício 1 - Criando Objetos em JavaScript com a Entidade "Produto"
+
+Suponha que você está desenvolvendo um sistema de gerenciamento de produtos em um e-commerce. Cada produto tem um nome e um preço. **Crie três objetos de produto de diferentes maneiras**: usando uma classe, usando uma factory function e usando Object.create.
+
+1. Utilizando uma **Classe** (usando a sintaxe de classe do ES6):
+   - Crie uma classe chamada `Produto` com os atributos `nome` e `preco`.
+   - Adicione um método chamado `exibirDetalhes()` que exibe no console o nome e o preço do produto.
+   - Crie um objeto chamado `produto1` a partir dessa classe com o nome "Celular" e preço 999.
+
+2. Utilizando uma **Factory Function**:
+   - Crie uma função chamada `criarProduto` que aceita os parâmetros `nome` e `preco` e retorna um objeto com essas propriedades e o método `exibirDetalhes()`.
+   - Crie um objeto chamado `produto2` usando a função `criarProduto` com o nome "Notebook" e preço 1499.
+
+3. Utilizando **Object.create**:
+   - Crie um objeto chamado `produtoProto` com um método `exibirDetalhes()` que exibe no console o nome e o preço do produto.
+   - Crie um objeto chamado `produto3` usando `Object.create` com o nome "Fone de Ouvido" e preço 99. Defina `produtoProto` como seu protótipo.
+
+Depois de criar esses objetos, chame o método `exibirDetalhes()` em cada um deles para verificar se estão funcionando corretamente. Certifique-se de que cada objeto tenha seu próprio nome e preço definidos.
+
+Este exercício permite praticar a criação de objetos em JavaScript usando diferentes abordagens com a entidade "Produto".
+
+### Exercício 2 - Criando Objetos em JavaScript com a Entidade "Cidade"
+
+Suponha que você está desenvolvendo um sistema de informações sobre cidades. Cada cidade tem um nome e uma população. **Crie três objetos de cidade de diferentes maneiras:** usando uma classe, usando uma factory function e usando Object.create.
+
+1. Utilizando uma **Classe** (usando a sintaxe de classe do ES6):
+   - Crie uma classe chamada `Cidade` com os atributos `nome` e `populacao`.
+   - Adicione um método chamado `exibirDetalhes()` que exibe no console o nome e a população da cidade.
+   - Crie um objeto chamado `cidade1` a partir dessa classe com o nome "Nova York" e uma população de 8.4 milhões.
+
+2. Utilizando uma **Factory Function**:
+   - Crie uma função chamada `criarCidade` que aceita os parâmetros `nome` e `populacao` e retorna um objeto com essas propriedades e o método `exibirDetalhes()`.
+   - Crie um objeto chamado `cidade2` usando a função `criarCidade` com o nome "Paris" e uma população de 2.2 milhões.
+
+3. Utilizando **Object.create**:
+   - Crie um objeto chamado `cidadeProto` com um método `exibirDetalhes()` que exibe no console o nome e a população da cidade.
+   - Crie um objeto chamado `cidade3` usando `Object.create` com o nome "Tóquio" e uma população de 13.9 milhões. Defina `cidadeProto` como seu protótipo.
+
+Depois de criar esses objetos, chame o método `exibirDetalhes()` em cada um deles para verificar se estão funcionando corretamente. Certifique-se de que cada objeto tenha seu próprio nome e população definidos.
+
+
+👍👍
 
 

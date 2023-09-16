@@ -1,10 +1,10 @@
 # Polimorfismo
 
 O que tem em comum um gato, um cachorro e um elefante? ....
-...são animais, correto? Alguma dúvida? 
+...são animais, correto? Alguma dúvida? 🤔
 Animais tem caraterísticas em comum, independente da espécie...porém, ao mesmo tempo, cada espécie tem caraterísticas diferentes.
 
-Do ponto de vista da POO, poderiamos representar este conceito com Herança, porém a questão é mais sutil.
+Do ponto de vista da POO, poderiamos representar este conceito com **Herança**, porém a questão é mais sutil.
 
 Considerando gato, cachorro e elefante como mamíferos que tem carateristicas comuns, algumas... o que tem em comum entre um peixe e um elefante?
 Obviamente compartilham carateristicas dos seres vivos, a nível macroscopico, analisando bem são muito diferentes. O meio que eles vivem, a maneira de respirar, reproduzir, etc... então, um peixe e um elefante são anaimais sim, mas bem diferentes.

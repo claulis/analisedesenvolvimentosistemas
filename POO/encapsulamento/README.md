@@ -143,7 +143,7 @@ console.log(pessoa1.idade); // Saída: 30 (idade não foi modificada devido à v
 
 # Exercicio de fixação
 
-Crie uma classe **ContaBancaria** que represente uma conta bancária. A classe deve encapsular os detalhes da conta, tornando os atributos privados e fornecendo métodos públicos para acessar e modificar esses atributos. A classe deve ter os seguintes atributos e métodos:
+Crie uma classe **ContaBancaria** que represente uma conta bancária. A classe deve encapsular os detalhes da conta, tornando os atributos privados e fornecendo métodos públicos para acessar e modificar esses atributos, use `get` e `set`. A classe deve ter os seguintes atributos e métodos:
 
 **Atributos (todos privados)**:
 

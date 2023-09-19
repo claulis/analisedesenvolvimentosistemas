@@ -192,3 +192,31 @@ class Personagem {
 
 Este é um exemplo simplificado de herança em JavaScript. O código cria uma função construtora `Personagem`, define um método no protótipo `Personagem.prototype`, cria uma função construtora `Heroi` que herda de `Personagem`, estabelece a herança com `Object.create`, e adiciona um método específico a `Herói.prototype`.
 
+## Exercício de fixação
+**Instrumentos Musicais**
+
+Você está desenvolvendo um sistema para uma loja de instrumentos musicais online. Crie uma **hierarquia de classes** que represente diferentes tipos de instrumentos musicais.
+
+Comece criando uma **classe base** InstrumentoMusical. Esta classe deve ter as seguintes propriedades:
+
+nome (string): O nome do instrumento musical.
+categoria (string): A categoria do instrumento (por exemplo, "cordas", "sopro", "percussão").
+preco (número): O preço do instrumento.
+Crie pelo menos duas **classes derivadas** que representem tipos diferentes de instrumentos musicais. Por exemplo, você pode criar uma classe Guitarra e uma classe Flauta. Cada uma dessas classes derivadas deve ter propriedades e métodos específicos que as tornem únicas em relação à classe base InstrumentoMusical.
+
+Demonstre a herança em ação, criando instâncias das classes derivadas e acessando propriedades e métodos específicos de cada tipo de instrumento musical. Por exemplo, você pode criar uma instância de Guitarra e chamar um método que simule a reprodução de uma melodia.
+Também não esqueça de usar sempre encapsulamento, membros privados iniciando com `#` e sucessivamente `get` e `set`.
+
+**Criaturas Mágicas**
+
+Você está desenvolvendo um jogo de aventura mágica e precisa criar classes para representar criaturas mágicas no mundo do jogo. Crie uma **hierarquia de classes** que inclui uma **classe base** CriaturaMagica e várias classes derivadas para tipos específicos de criaturas mágicas.
+
+Comece criando a classe base CriaturaMagica. Esta classe deve ter as seguintes propriedades:
+
+nome (string): O nome da criatura mágica.
+poder (número): O nível de poder da criatura mágica.
+Crie pelo menos duas classes derivadas que representem tipos diferentes de criaturas mágicas. Por exemplo, você pode criar uma classe Dragao e uma classe Fada. Cada uma dessas classes derivadas deve ter propriedades e métodos específicos que as tornem únicas em relação à classe base CriaturaMagica.
+
+Demonstre a herança em ação, criando instâncias das classes derivadas e acessando propriedades e métodos específicos de cada tipo de criatura mágica.
+Também não esqueça de usar sempre encapsulamento, membros privados iniciando com `#` e sucessivamente `get` e `set`.
+
